@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://127.0.0.1:9090/'
+  apiUrl: 'https://conduit.productionready.io/api',
+  limit: 10,
 };
 
 /*
