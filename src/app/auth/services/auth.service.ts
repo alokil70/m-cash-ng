@@ -25,7 +25,7 @@ export class AuthService {
   }
 
   login(data: LoginRequestInterface): Observable<CurrentUserInterface> {
-    const url = environment.apiUrl + '/users/login';
+    const url = environment.apiUrl + '/users/loginCash';
     return this.http
       .post<AuthResponseInterface>(url, data)
       .pipe(map(this.getUser));
