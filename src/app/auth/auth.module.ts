@@ -16,30 +16,30 @@ import { LoginComponent } from './components/login/login.component';
 import { GetCurrentUserEffect } from './store/effects/getCurrentUser.effect';
 
 const routes = [
-  {
-    path: 'register',
-    component: RegisterComponent,
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
+	{
+		path: 'register',
+		component: RegisterComponent,
+	},
+	{
+		path: 'login',
+		component: LoginComponent,
+	},
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    ReactiveFormsModule,
-    StoreModule.forFeature('auth', reducers),
-    EffectsModule.forFeature([
-      RegisterEffect,
-      LoginEffect,
-      GetCurrentUserEffect,
-    ]),
-    BackendErrorMessagesModule,
-  ],
-  declarations: [RegisterComponent, LoginComponent],
-  providers: [AuthService, PersistanceService],
+	imports: [
+		CommonModule,
+		RouterModule.forChild(routes),
+		ReactiveFormsModule,
+		StoreModule.forFeature('auth', reducers),
+		EffectsModule.forFeature([
+			RegisterEffect,
+			LoginEffect,
+			GetCurrentUserEffect,
+		]),
+		BackendErrorMessagesModule,
+	],
+	declarations: [RegisterComponent, LoginComponent],
+	providers: [AuthService, PersistanceService],
 })
 export class AuthModule {}

@@ -15,33 +15,35 @@ import { TopBarModule } from './shared/modules/topBar/topBar.module';
 import { AuthInterceptor } from './shared/services/authinterceptor.service';
 import { PersistanceService } from './shared/services/persistance.service';
 import { AuthCashModule } from './authCash/authCash.module';
+import { CashBoardModule } from './cash-board/cash-board.module';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AuthModule,
-    AuthCashModule,
-    HttpClientModule,
-    RouterModule.forRoot([]),
-    StoreModule.forRoot({ router: routerReducer }),
-    StoreDevtoolsModule.instrument({
-      maxAge: 25,
-      logOnly: environment.production,
-    }),
-    EffectsModule.forRoot([]),
-    StoreRouterConnectingModule.forRoot(),
-    TopBarModule,
-    GlobalFeedModule,
-  ],
-  providers: [
-    PersistanceService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true,
-    },
-  ],
-  bootstrap: [AppComponent],
+	declarations: [AppComponent],
+	imports: [
+		BrowserModule,
+		AuthModule,
+		AuthCashModule,
+		HttpClientModule,
+		RouterModule.forRoot([]),
+		StoreModule.forRoot({ router: routerReducer }),
+		StoreDevtoolsModule.instrument({
+			maxAge: 25,
+			logOnly: environment.production,
+		}),
+		EffectsModule.forRoot([]),
+		StoreRouterConnectingModule.forRoot(),
+		CashBoardModule,
+		TopBarModule,
+		GlobalFeedModule,
+	],
+	providers: [
+		PersistanceService,
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: AuthInterceptor,
+			multi: true,
+		},
+	],
+	bootstrap: [AppComponent],
 })
 export class AppModule {}

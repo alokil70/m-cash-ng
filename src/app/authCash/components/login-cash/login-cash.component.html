@@ -1,1 +1,18 @@
-<p>login-cash works!</p>
+<form [formGroup]="formGroup" (ngSubmit)="onFormSubmit()" class="form">
+	<small class="p5">Зарегистрируйтесь магнитной картой или кодом с паролем</small>
+
+	<div class="p5">
+		<label>Логин</label>
+		<input formControlName="code" />
+		<small *ngIf="formGroup.hasError('required', 'code')">обязательное поле</small>
+	</div>
+
+	<div class="p5">
+		<label>Пароль</label>
+		<input formControlName="password" type="password" />
+		<small *ngIf="formGroup.hasError('required', 'password')">обязательное поле</small>
+	</div>
+
+	<button [disabled]="(isSubmitting$ | async) || formGroup.invalid" class="p5">Войти</button>
+
+</form>

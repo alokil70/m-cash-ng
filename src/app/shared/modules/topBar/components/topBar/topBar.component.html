@@ -34,7 +34,7 @@
       </ng-container>
       <ng-container *ngIf="isAnonymous$ | async">
         <li class="nav-item">
-          <a [routerLink]="['/loginCash']" class="nav-link">
+          <a [routerLink]="['/login']" class="nav-link">
             Sign in
           </a>
         </li>
@@ -46,4 +46,9 @@
       </ng-container>
     </ul>
   </div>
+	<div>
+		<div>isLoggedIn$ {{isLoggedIn$ | async}}</div>
+		<div>isAnonymous$ {{isAnonymous$ | async}}</div>
+		<div>currentUser$ {{currentUser$ | async}}</div>
+	</div>
 </nav>

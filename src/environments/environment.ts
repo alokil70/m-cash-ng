@@ -3,9 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  apiUrl: 'https://conduit.productionready.io/api',
-  limit: 10,
+	production: false,
+	apiUrl: 'http://localhost:3000/api',
+	limit: 10,
 };
 
 /*
