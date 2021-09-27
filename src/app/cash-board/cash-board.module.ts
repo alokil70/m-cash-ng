@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CashBoardComponent } from './components/cash-board/cash-board.component';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
-import { reducers } from '../authCash/store/reducers';
+import { reducers } from '../auth-cash/store/reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { BoardItemComponent } from './components/board-item/board-item.component';
 

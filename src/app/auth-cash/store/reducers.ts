@@ -1,15 +1,15 @@
 import { createReducer, on, Action } from '@ngrx/store';
-import { AuthCashStateInterface } from 'src/app/authCash/types/authCashState.interface';
+import { AuthCashStateInterface } from 'src/app/auth-cash/types/authCashState.interface';
 import {
 	loginCashAction,
 	loginCashSuccessAction,
 	loginCashFailureAction,
-} from 'src/app/authCash/store/actions/loginCash.action';
+} from 'src/app/auth-cash/store/actions/loginCash.action';
 import {
 	getCurrentUserCashAction,
 	getCurrentUserCashSuccessAction,
 	getCurrentUserCashFailureAction,
-} from 'src/app/authCash/store/actions/getCurrentUserCash.action';
+} from 'src/app/auth-cash/store/actions/getCurrentUserCash.action';
 
 const initialState: AuthCashStateInterface = {
 	isSubmitting: false,

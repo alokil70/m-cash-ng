@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CurrentUserInterface } from 'src/app/shared/types/currentUser.interface';
 import { environment } from 'src/environments/environment';
-import { LoginCashResponseInterface } from 'src/app/authCash/types/loginCashResponse.interface';
-import { LoginCashRequestInterface } from 'src/app/authCash/types/loginCashRequest.interface';
+import { LoginCashResponseInterface } from 'src/app/auth-cash/types/loginCashResponse.interface';
+import { LoginCashRequestInterface } from 'src/app/auth-cash/types/loginCashRequest.interface';
 
 @Injectable()
 export class AuthCashService {

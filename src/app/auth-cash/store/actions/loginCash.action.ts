@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
-import { ActionTypes } from 'src/app/authCash/store/actionTypes';
-import { LoginCashRequestInterface } from 'src/app/authCash/types/loginCashRequest.interface';
+import { ActionTypes } from 'src/app/auth-cash/store/actionTypes';
+import { LoginCashRequestInterface } from 'src/app/auth-cash/types/loginCashRequest.interface';
 import { BackendErrorsInterface } from 'src/app/shared/types/backendErrors.interface';
 import { CurrentUserCashInterface } from 'src/app/shared/types/currentUserCash.interface';
 

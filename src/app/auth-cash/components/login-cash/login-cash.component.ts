@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 import { BackendErrorsInterface } from 'src/app/shared/types/backendErrors.interface';
 import { Store } from '@ngrx/store';
 import { isSubmittingSelector, validationErrorsSelector } from '../../../auth/store/selectors';
-import { loginCashAction } from 'src/app/authCash/store/actions/loginCash.action';
-import { LoginCashRequestInterface } from 'src/app/authCash/types/loginCashRequest.interface';
+import { loginCashAction } from 'src/app/auth-cash/store/actions/loginCash.action';
+import { LoginCashRequestInterface } from 'src/app/auth-cash/types/loginCashRequest.interface';
 
 @Component({
 	selector: 'app-login-cash',
