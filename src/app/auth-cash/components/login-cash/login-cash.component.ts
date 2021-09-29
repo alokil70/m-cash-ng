@@ -16,6 +16,8 @@ export class LoginCashComponent implements OnInit {
 	formGroup: FormGroup;
 	isSubmitting$: Observable<boolean>;
 	backendErrors$: Observable<BackendErrorsInterface | null>;
+	code: string;
+	pass: string;
 
 	constructor(private formBuilder: FormBuilder, private store: Store) {}
 
@@ -31,8 +33,8 @@ export class LoginCashComponent implements OnInit {
 
 	initializeForm(): void {
 		this.formGroup = this.formBuilder.group({
-			code: ['10', Validators.required],
-			password: ['10', Validators.required],
+			code: [this.code, Validators.required],
+			password: [this.pass, Validators.required],
 		});
 	}
 
@@ -41,5 +43,11 @@ export class LoginCashComponent implements OnInit {
 			user: this.formGroup.value,
 		};
 		this.store.dispatch(loginCashAction({ request }));
+	}
+
+	keyEvent($event: number) {
+		console.log($event);
+		console.log(typeof this.code);
+		this.code += $event;
 	}
 }

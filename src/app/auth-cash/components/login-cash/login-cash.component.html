@@ -1,3 +1,5 @@
+<div class="block">
+
 <form [formGroup]="formGroup" (ngSubmit)="onFormSubmit()" class="form">
 	<small class="p5">Зарегистрируйтесь магнитной картой или кодом с паролем</small>
 
@@ -16,3 +18,7 @@
 	<button [disabled]="(isSubmitting$ | async) || formGroup.invalid" class="p5">Войти</button>
 
 </form>
+
+<app-login-cash-kbd (output)="keyEvent($event)"></app-login-cash-kbd>
+
+</div>
