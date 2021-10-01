@@ -5,7 +5,7 @@
 
 	<div class="p5">
 		<label>Логин</label>
-		<input formControlName="code" />
+		<input formControlName="code" value="{{code}}" />
 		<small *ngIf="formGroup.hasError('required', 'code')">обязательное поле</small>
 	</div>
 

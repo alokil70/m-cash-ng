@@ -16,8 +16,8 @@ export class LoginCashComponent implements OnInit {
 	formGroup: FormGroup;
 	isSubmitting$: Observable<boolean>;
 	backendErrors$: Observable<BackendErrorsInterface | null>;
-	code: string;
-	pass: string;
+	code: string = '';
+	pass: string = '10';
 
 	constructor(private formBuilder: FormBuilder, private store: Store) {}
 
@@ -45,9 +45,8 @@ export class LoginCashComponent implements OnInit {
 		this.store.dispatch(loginCashAction({ request }));
 	}
 
-	keyEvent($event: number) {
+	keyEvent($event: string) {
 		console.log($event);
-		console.log(typeof this.code);
 		this.code += $event;
 	}
 }
