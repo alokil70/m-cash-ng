@@ -18,7 +18,7 @@ export class LoginCashComponent implements OnInit {
 	backendErrors$: Observable<BackendErrorsInterface | null>;
 	code = '';
 	pass = '';
-	codeFocus: boolean = true;
+	codeFocus = true;
 
 	constructor(private formBuilder: FormBuilder, private store: Store) {}
 
