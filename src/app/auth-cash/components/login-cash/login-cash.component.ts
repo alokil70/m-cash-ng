@@ -18,6 +18,7 @@ export class LoginCashComponent implements OnInit {
 	backendErrors$: Observable<BackendErrorsInterface | null>;
 	code = '';
 	pass = '';
+	codeFocus: boolean = true;
 
 	constructor(private formBuilder: FormBuilder, private store: Store) {}
 
@@ -34,7 +35,7 @@ export class LoginCashComponent implements OnInit {
 	initializeForm(): void {
 		this.formGroup = this.formBuilder.group({
 			code: [this.code],
-			password: [this.pass, Validators.required],
+			password: [this.pass],
 		});
 	}
 
@@ -52,6 +53,10 @@ export class LoginCashComponent implements OnInit {
 	}
 
 	keyEvent($event: string) {
-		this.code += $event;
+		if (this.codeFocus) {
+			this.code += $event;
+			return;
+		}
+		this.pass += $event;
 	}
 }

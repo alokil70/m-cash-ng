@@ -1,24 +1,24 @@
 <div class="block">
 
-	<form [formGroup]="formGroup" (ngSubmit)="onFormSubmit()" class="form">
-		<small class="p5">Зарегистрируйтесь магнитной картой или кодом с паролем</small>
+<form [formGroup]="formGroup" (ngSubmit)="onFormSubmit()" class="form">
+	<small class="p5">Зарегистрируйтесь магнитной картой или кодом с паролем</small>
 
-		<div class="p5">
-			<label>Логин</label>
-			<input formControlName="code" [value]="code"/>
-			<small *ngIf="formGroup.hasError('required', 'code')">обязательное поле</small>
-		</div>
+	<div class="p5">
+		<label>Логин</label>
+		<input formControlName="code" value="{{code}}" (focus)="codeFocus=true" />
+		<small *ngIf="formGroup.hasError('required', 'code')">обязательное поле</small>
+	</div>
 
-		<div class="p5">
-			<label>Пароль</label>
-			<input formControlName="password" type="password" />
-			<small *ngIf="formGroup.hasError('required', 'password')">обязательное поле</small>
-		</div>
+	<div class="p5">
+		<label>Пароль</label>
+		<input formControlName="password" value="{{pass}}" type="password" (focus)="codeFocus=false" />
+		<small *ngIf="formGroup.hasError('required', 'password')">обязательное поле</small>
+	</div>
 
-		<button [disabled]="(isSubmitting$ | async) || formGroup.invalid" class="p5">Войти</button>
+	<button [disabled]="(isSubmitting$ | async) || formGroup.invalid" class="p5">Войти</button>
 
-	</form>
+</form>
 
-	<app-login-cash-kbd (output)="keyEvent($event)"></app-login-cash-kbd>
+<app-login-cash-kbd (output)="keyEvent($event)"></app-login-cash-kbd>
 
 </div>
