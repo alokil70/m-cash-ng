@@ -38,7 +38,7 @@ export class LoginCashEffect {
 			return this.actions$.pipe(
 				ofType(loginCashSuccessAction),
 				tap(() => {
-					this.router.navigateByUrl('/');
+					this.router.navigateByUrl('/cash/board');
 				}),
 			);
 		},
