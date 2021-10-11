@@ -5,30 +5,30 @@ import { of } from 'rxjs';
 
 import { FeedService } from 'src/app/shared/modules/feed/services/feed.service';
 import {
-  getFeedAction,
-  getFeedSuccessAction,
-  getFeedFailureAction,
+	getFeedAction,
+	getFeedSuccessAction,
+	getFeedFailureAction,
 } from 'src/app/shared/modules/feed/store/actions/getFeed.action';
 import { GetFeedResponseInterface } from 'src/app/shared/modules/feed/types/getFeedResponse.interface';
 
 @Injectable()
 export class GetFeedEffect {
-  getFeed$ = createEffect(() => {
-    return this.actions$.pipe(
-      ofType(getFeedAction),
-      switchMap(({ url }) => {
-        return this.feedService.getFeed(url).pipe(
-          map((feed: GetFeedResponseInterface) => {
-            return getFeedSuccessAction({ feed });
-          }),
+	getFeed$ = createEffect(() => {
+		return this.actions$.pipe(
+			ofType(getFeedAction),
+			switchMap(({ url }) => {
+				return this.feedService.getFeed(url).pipe(
+					map((feed: GetFeedResponseInterface) => {
+						return getFeedSuccessAction({ feed });
+					}),
 
-          catchError(() => {
-            return of(getFeedFailureAction());
-          })
-        );
-      })
-    );
-  });
+					catchError(() => {
+						return of(getFeedFailureAction());
+					}),
+				);
+			}),
+		);
+	});
 
-  constructor(private actions$: Actions, private feedService: FeedService) {}
+	constructor(private actions$: Actions, private feedService: FeedService) {}
 }

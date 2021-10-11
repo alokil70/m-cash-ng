@@ -5,8 +5,8 @@ import { RouterModule } from '@angular/router';
 import { TopBarComponent } from 'src/app/shared/modules/topBar/components/topBar/topBar.component';
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
-  declarations: [TopBarComponent],
-  exports: [TopBarComponent],
+	imports: [CommonModule, RouterModule],
+	declarations: [TopBarComponent],
+	exports: [TopBarComponent],
 })
 export class TopBarModule {}

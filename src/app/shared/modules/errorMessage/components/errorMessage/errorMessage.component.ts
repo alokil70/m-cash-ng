@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'mc-error-message',
-  templateUrl: './errorMessage.component.html',
+	selector: 'mc-error-message',
+	templateUrl: './errorMessage.component.html',
 })
 export class ErrorMessageComponent {
-  @Input('message') messageProps = 'Something went wrong';
+	@Input('message') messageProps = 'Something went wrong';
 }

@@ -32,11 +32,7 @@ const routes = [
 		RouterModule.forChild(routes),
 		ReactiveFormsModule,
 		StoreModule.forFeature('auth', reducers),
-		EffectsModule.forFeature([
-			RegisterEffect,
-			LoginEffect,
-			GetCurrentUserEffect,
-		]),
+		EffectsModule.forFeature([RegisterEffect, LoginEffect, GetCurrentUserEffect]),
 		BackendErrorMessagesModule,
 	],
 	declarations: [RegisterComponent, LoginComponent],

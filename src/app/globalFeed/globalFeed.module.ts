@@ -14,12 +14,7 @@ const routes = [
 ];
 
 @NgModule({
-	imports: [
-		CommonModule,
-		RouterModule.forChild(routes),
-		FeedModule,
-		BannerModule,
-	],
+	imports: [CommonModule, RouterModule.forChild(routes), FeedModule, BannerModule],
 	declarations: [GlobalFeedComponent],
 })
 export class GlobalFeedModule {}

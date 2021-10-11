@@ -3,11 +3,7 @@ import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 
 import { CurrentUserInterface } from 'src/app/shared/types/currentUser.interface';
-import {
-	isLoggedInSelector,
-	isAnonymousSelector,
-	currentUserSelector,
-} from 'src/app/auth/store/selectors';
+import { isLoggedInSelector, isAnonymousSelector, currentUserSelector } from 'src/app/auth/store/selectors';
 
 @Component({
 	selector: 'mc-topbar',

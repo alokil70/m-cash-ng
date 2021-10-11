@@ -10,6 +10,4 @@ export const getCurrentUserSuccessAction = createAction(
 	props<{ currentUser: CurrentUserInterface }>(),
 );
 
-export const getCurrentUserFailureAction = createAction(
-	ActionTypes.GET_CURRENT_USER_FAILURE,
-);
+export const getCurrentUserFailureAction = createAction(ActionTypes.GET_CURRENT_USER_FAILURE);

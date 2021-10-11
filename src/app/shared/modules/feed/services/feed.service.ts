@@ -6,10 +6,10 @@ import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class FeedService {
-  constructor(private http: HttpClient) {}
+	constructor(private http: HttpClient) {}
 
-  getFeed(url: string): Observable<GetFeedResponseInterface> {
-    const fullUrl = environment.apiUrl + url;
-    return this.http.get<GetFeedResponseInterface>(fullUrl);
-  }
+	getFeed(url: string): Observable<GetFeedResponseInterface> {
+		const fullUrl = environment.apiUrl + url;
+		return this.http.get<GetFeedResponseInterface>(fullUrl);
+	}
 }

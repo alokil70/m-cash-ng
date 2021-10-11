@@ -6,11 +6,7 @@ import { stringify, parseUrl } from 'query-string';
 
 import { getFeedAction } from 'src/app/shared/modules/feed/store/actions/getFeed.action';
 import { GetFeedResponseInterface } from 'src/app/shared/modules/feed/types/getFeedResponse.interface';
-import {
-	feedSelector,
-	errorSelector,
-	isLoadingSelector,
-} from 'src/app/shared/modules/feed/store/selectors';
+import { feedSelector, errorSelector, isLoadingSelector } from 'src/app/shared/modules/feed/store/selectors';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -29,11 +25,7 @@ export class FeedComponent implements OnInit, OnDestroy {
 	queryParamsSubscription: Subscription;
 	currentPage: number;
 
-	constructor(
-		private store: Store,
-		private router: Router,
-		private route: ActivatedRoute,
-	) {}
+	constructor(private store: Store, private router: Router, private route: ActivatedRoute) {}
 
 	ngOnInit(): void {
 		this.initializeValues();
@@ -45,12 +37,10 @@ export class FeedComponent implements OnInit, OnDestroy {
 	}
 
 	initializeListeners(): void {
-		this.queryParamsSubscription = this.route.queryParams.subscribe(
-			(params: Params) => {
-				this.currentPage = Number(params.page || '1');
-				this.fetchFeed();
-			},
-		);
+		this.queryParamsSubscription = this.route.queryParams.subscribe((params: Params) => {
+			this.currentPage = Number(params.page || '1');
+			this.fetchFeed();
+		});
 	}
 
 	initializeValues(): void {

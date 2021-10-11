@@ -13,17 +13,17 @@ import { LoadingModule } from 'src/app/shared/modules/loading/loading.module';
 import { PaginationModule } from 'src/app/shared/modules/pagination/pagination.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    EffectsModule.forFeature([GetFeedEffect]),
-    StoreModule.forFeature('feed', reducers),
-    RouterModule,
-    ErrorMessageModule,
-    LoadingModule,
-    PaginationModule,
-  ],
-  declarations: [FeedComponent],
-  exports: [FeedComponent],
-  providers: [FeedService],
+	imports: [
+		CommonModule,
+		EffectsModule.forFeature([GetFeedEffect]),
+		StoreModule.forFeature('feed', reducers),
+		RouterModule,
+		ErrorMessageModule,
+		LoadingModule,
+		PaginationModule,
+	],
+	declarations: [FeedComponent],
+	exports: [FeedComponent],
+	providers: [FeedService],
 })
 export class FeedModule {}

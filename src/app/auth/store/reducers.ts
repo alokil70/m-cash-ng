@@ -6,11 +6,7 @@ import {
 	registerSuccessAction,
 	registerFailureAction,
 } from 'src/app/auth/store/actions/register.action';
-import {
-	loginAction,
-	loginSuccessAction,
-	loginFailureAction,
-} from 'src/app/auth/store/actions/login.action';
+import { loginAction, loginSuccessAction, loginFailureAction } from 'src/app/auth/store/actions/login.action';
 import {
 	getCurrentUserAction,
 	getCurrentUserSuccessAction,

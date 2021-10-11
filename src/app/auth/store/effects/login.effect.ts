@@ -8,11 +8,7 @@ import { of } from 'rxjs';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { CurrentUserInterface } from 'src/app/shared/types/currentUser.interface';
 import { PersistanceService } from 'src/app/shared/services/persistance.service';
-import {
-	loginAction,
-	loginSuccessAction,
-	loginFailureAction,
-} from 'src/app/auth/store/actions/login.action';
+import { loginAction, loginSuccessAction, loginFailureAction } from 'src/app/auth/store/actions/login.action';
 
 @Injectable()
 export class LoginEffect {
@@ -27,9 +23,7 @@ export class LoginEffect {
 					}),
 
 					catchError((errorResponse: HttpErrorResponse) => {
-						return of(
-							loginFailureAction({ errors: errorResponse.error.errors }),
-						);
+						return of(loginFailureAction({ errors: errorResponse.error.errors }));
 					}),
 				);
 			}),
