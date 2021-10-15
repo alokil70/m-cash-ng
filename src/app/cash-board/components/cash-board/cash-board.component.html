@@ -1,14 +1,42 @@
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
-<app-board-item></app-board-item>
+<div class="container">
+	<div class="block-container">
+	<div class="wrapper">
+		<div class="block-header">{{block_header}}</div>
+		<div class="block2rows">
+			<app-board-item *ngFor="let card of cards1" [card_props]="card"></app-board-item>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="block-header">{{block_header}}</div>
+		<div class="block1row">
+			<app-board-item *ngFor="let card of cards2" [card_props]="card"></app-board-item>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="block-header">{{block_header}}</div>
+		<div class="block1row">
+			<app-board-item *ngFor="let card of cards3" [card_props]="card"></app-board-item>
+		</div>
+	</div>
+	</div>
+	<div class="block-container">
+	<div class="wrapper">
+		<div class="block-header">{{block_header}}</div>
+		<div class="block2rows">
+			<app-board-item *ngFor="let card of cards4" [card_props]="card"></app-board-item>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="block-header">{{block_header}}</div>
+		<div class="block1row">
+			<app-board-item *ngFor="let card of cards2" [card_props]="card"></app-board-item>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="block-header">{{block_header}}</div>
+		<div class="block1row">
+			<app-board-item *ngFor="let card of cards3" [card_props]="card"></app-board-item>
+		</div>
+	</div>
+	</div>
+</div>

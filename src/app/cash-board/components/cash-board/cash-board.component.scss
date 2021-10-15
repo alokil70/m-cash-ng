@@ -1,0 +1,29 @@
+.container {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 35px;
+}
+.block-container {
+
+}
+.block2rows {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(150px, 1fr));
+	grid-template-rows: repeat(2, minmax(90px, auto));
+	column-gap: 10px;
+	row-gap: 10px;
+}
+.block1row {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(150px, 1fr));
+	grid-template-rows: repeat(1, minmax(90px, auto));
+	column-gap: 10px;
+	row-gap: 10px;
+}
+.wrapper {
+	margin: 10px;
+}
+.block-header {
+	padding: 3px;
+}

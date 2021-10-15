@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
 
 * {
 	box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', Tahoma, sans-serif;
 	font-size: 1rem;
 	line-height: 1.6;
 	background-color: #fff;
@@ -15,13 +15,19 @@ body {
 }
 html,
 body {
-	height: 100%;
 }
-
 :root {
 	--primary-color: #dc3545;
 	--dark-color: #333333;
 	--light-color: #f4f4f4;
 	--danger-color: #dc3545;
 	--success-color: #28a745;
+}
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fz40 {
+	font-size: 40px;
 }
