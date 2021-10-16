@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
-	selector: 'app-cash-board',
-	templateUrl: './cash-board.component.html',
-	styleUrls: ['./cash-board.component.scss'],
+	selector: 'app-orders',
+	templateUrl: './orders.component.html',
+	styleUrls: ['./orders.component.scss'],
 })
-export class CashBoardComponent implements OnInit {
+export class OrdersComponent implements OnInit {
 	cards = [
 		{
 			id: 1,
@@ -94,12 +93,11 @@ export class CashBoardComponent implements OnInit {
 	cards3 = this.cards.slice(9, 12);
 	cards4 = this.cards.slice(12, 16);
 	block_header = 'Заголовок блока';
-	constructor(private router: Router) {}
+	constructor() {}
 
 	ngOnInit(): void {}
 
 	click() {
-		console.log('clicked');
-		this.router.navigate(['/cash/orders']);
+		console.log('orders click');
 	}
 }

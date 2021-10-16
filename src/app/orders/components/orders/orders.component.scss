@@ -1,14 +1,13 @@
 .container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: 35px;
 }
 .block-container {
 }
 .block2rows {
+	height: 40vh;
 	display: grid;
-	grid-template-columns: repeat(3, minmax(150px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 	grid-template-rows: repeat(2, minmax(90px, auto));
+	grid-auto-rows: 90px;
 	column-gap: 10px;
 	row-gap: 10px;
 }
