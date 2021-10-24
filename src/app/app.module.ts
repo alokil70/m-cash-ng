@@ -16,7 +16,7 @@ import { AuthInterceptor } from './shared/services/authinterceptor.service';
 import { PersistanceService } from './shared/services/persistance.service';
 import { AuthCashModule } from './auth-cash/auth-cash.module';
 import { CashBoardModule } from './cash-board/cash-board.module';
-import { OrdersModule } from './orders/orders.module';
+import { GlobalOrdersModule } from './global-orders/global-orders.module';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -35,8 +35,8 @@ import { OrdersModule } from './orders/orders.module';
 		StoreRouterConnectingModule.forRoot(),
 		CashBoardModule,
 		TopBarModule,
-		OrdersModule,
 		GlobalFeedModule,
+		GlobalOrdersModule,
 	],
 	providers: [
 		PersistanceService,

@@ -6,12 +6,13 @@ import { OrdersItemModule } from '../shared/modules/cash/orders/orders-item/orde
 
 const routes = [
 	{
-		path: 'cash/orders',
+		path: 'cash/orders2',
 		component: OrdersComponent,
 	},
 ];
 @NgModule({
 	declarations: [OrdersComponent],
 	imports: [CommonModule, RouterModule.forChild(routes), OrdersItemModule],
+	exports: [OrdersComponent],
 })
 export class OrdersModule {}
