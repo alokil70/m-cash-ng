@@ -1,0 +1,45 @@
+.container {
+	display: flex;
+	padding: 0 10px;
+}
+.navbar-list {
+	display: flex;
+}
+.nav-item {
+	padding: 5px;
+}
+.navbar-brand {
+	line-height: 1;
+}
+.navbar {
+	display: flex;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	background-color: #5d6692;
+	position: absolute;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .2);
+
+	ul {
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+	}
+
+	a {
+		display: block;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 6px;
+		line-height: 1;
+		cursor: pointer;
+		transition: .3s;
+
+		&:hover, &.nuxt-link-exact-active {
+			background-color: #dc3545;
+		}
+	}
+}

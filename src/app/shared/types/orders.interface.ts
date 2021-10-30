@@ -3,6 +3,7 @@ import { ShiftInterface } from './shift.interface';
 
 export interface OrdersInterface {
 	title: string;
+	num: number;
 	author: ProfileInterface;
 	creator: string;
 	description: string;
@@ -13,5 +14,7 @@ export interface OrdersInterface {
 	commonShift: ShiftInterface;
 	createdAt: string;
 	updatedAt: string;
+	table: number;
+	position: number;
 	guid: string;
 }

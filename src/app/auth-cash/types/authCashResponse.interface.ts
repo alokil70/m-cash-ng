@@ -1,5 +1,5 @@
 import { CurrentUserCashInterface } from '../../shared/types/currentUserCash.interface';
 
-export interface LoginCashResponseInterface {
+export interface AuthCashResponseInterface {
 	user: CurrentUserCashInterface;
 }

@@ -8,12 +8,12 @@ import { AuthCashService } from './services/authCash.service';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './store/reducers';
 import { EffectsModule } from '@ngrx/effects';
-import { GetCurrentUserEffect } from '../auth/store/effects/getCurrentUser.effect';
 import { BackendErrorMessagesModule } from '../shared/modules/backendErrorMessages/backendErrorMessages.module';
 import { LoginCashEffect } from './store/effects/loginCash.effect';
 import { LoginCashKBDComponent } from './components/login-cash-kbd/login-cash-kbd.component';
 import { LoginCashWrapperComponent } from './components/login-cash-wrapper/login-cash-wrapper.component';
 import { LoginCashLogoComponent } from './components/login-cash-logo/login-cash-logo.component';
+import { GetCurrentUserCashEffect } from './store/effects/getCurrentUserCash.effect';
 
 const routes = [
 	{
@@ -27,8 +27,8 @@ const routes = [
 		CommonModule,
 		RouterModule.forChild(routes),
 		ReactiveFormsModule,
-		StoreModule.forFeature('auth-cash', reducers),
-		EffectsModule.forFeature([LoginCashEffect, GetCurrentUserEffect]),
+		StoreModule.forFeature('authCash', reducers),
+		EffectsModule.forFeature([LoginCashEffect, GetCurrentUserCashEffect]),
 		BackendErrorMessagesModule,
 	],
 	declarations: [LoginCashComponent, LoginCashKBDComponent, LoginCashWrapperComponent, LoginCashLogoComponent],

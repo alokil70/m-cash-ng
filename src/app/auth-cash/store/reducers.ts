@@ -19,7 +19,7 @@ const initialState: AuthCashStateInterface = {
 	isLoggedIn: null,
 };
 
-const authReducer = createReducer(
+const authCashReducer = createReducer(
 	initialState,
 	on(
 		loginCashAction,
@@ -74,5 +74,5 @@ const authReducer = createReducer(
 );
 
 export function reducers(state: AuthCashStateInterface, action: Action) {
-	return authReducer(state, action);
+	return authCashReducer(state, action);
 }

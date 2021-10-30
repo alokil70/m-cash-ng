@@ -1,0 +1,25 @@
+.card {
+	height: 100%;
+	background-color: #5d6692;
+	color: white;
+	text-align: center;
+	border-radius: 4px;
+	&:hover {
+		background-color: #dc3545;
+	}
+}
+.green {
+	background-color: #28a745;
+}
+.grey {
+	background-color: grey;
+}
+.pink {
+	background-color: pink;
+}
+.red {
+	background-color: red;
+}
+.blue {
+	background-color: blue;
+}

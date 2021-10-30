@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { getCurrentUserAction } from './auth/store/actions/getCurrentUser.action';
 import { Store } from '@ngrx/store';
+import { getCurrentUserCashAction } from './auth-cash/store/actions/getCurrentUserCash.action';
 
 @Component({
 	selector: 'app-root',
@@ -10,7 +10,7 @@ import { Store } from '@ngrx/store';
 export class AppComponent {
 	constructor(private store: Store) {}
 
-	/*	ngOnInit(): void {
-		this.store.dispatch(getCurrentUserAction());
-	}*/
+	ngOnInit(): void {
+		this.store.dispatch(getCurrentUserCashAction());
+	}
 }

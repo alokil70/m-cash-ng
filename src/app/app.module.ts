@@ -9,7 +9,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
-import { AuthModule } from './auth/auth.module';
 import { GlobalFeedModule } from './globalFeed/globalFeed.module';
 import { TopBarModule } from './shared/modules/topBar/topBar.module';
 import { AuthInterceptor } from './shared/services/authinterceptor.service';
@@ -22,7 +21,6 @@ import { GlobalOrdersModule } from './global-orders/global-orders.module';
 	declarations: [AppComponent],
 	imports: [
 		BrowserModule,
-		AuthModule,
 		AuthCashModule,
 		HttpClientModule,
 		RouterModule.forRoot([]),
@@ -35,7 +33,6 @@ import { GlobalOrdersModule } from './global-orders/global-orders.module';
 		StoreRouterConnectingModule.forRoot(),
 		CashBoardModule,
 		TopBarModule,
-		GlobalFeedModule,
 		GlobalOrdersModule,
 	],
 	providers: [
