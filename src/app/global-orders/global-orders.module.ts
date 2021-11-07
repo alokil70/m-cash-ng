@@ -13,6 +13,6 @@ const routes = [
 
 @NgModule({
 	declarations: [GlobalOrdersComponent],
-	imports: [CommonModule, RouterModule.forChild(routes), OrdersModule],
+	imports: [CommonModule, OrdersModule, RouterModule.forChild(routes)],
 })
 export class GlobalOrdersModule {}

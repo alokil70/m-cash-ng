@@ -6,21 +6,39 @@
 		<ul class="navbar-list">
 			<ng-container *ngIf="isLoggedIn$ | async">
 				<li class="nav-item">
-					<a [routerLink]="['/cash']" class="nav-link">создать</a>
+					<a
+						[routerLink]="['/']"
+						[routerLinkActiveOptions]="{ exact: true }"
+						class="nav-link"
+						routerLinkActive="active"
+						>создать</a
+					>
 				</li>
 				<li class="nav-item">
-					<a [routerLink]="['/cash']" class="nav-link">домой</a>
+					<a
+						[routerLink]="['/cash']"
+						[routerLinkActiveOptions]="{ exact: true }"
+						class="nav-link"
+						routerLinkActive="active"
+						><i class="ion-compose"></i>домой</a
+					>
 				</li>
 				<li class="nav-item">
-					<a [routerLink]="['/cash/board']" class="nav-link">
+					<a [routerLink]="['/cash/board']" class="nav-link" routerLinkActive="active">
 						<i class="ion-compose"></i>
 						&nbsp; доска
 					</a>
 				</li>
 				<li class="nav-item">
-					<a [routerLink]="['/cash/orders']" class="nav-link">
+					<a [routerLink]="['/cash/orders']" class="nav-link" routerLinkActive="active">
 						<i class="ion-gear-a"></i>
 						&nbsp; заказы
+					</a>
+				</li>
+				<li class="nav-item">
+					<a [routerLink]="['/cash/order']" class="nav-link" routerLinkActive="active">
+						<i class="ion-gear-a"></i>
+						&nbsp; заказ
 					</a>
 				</li>
 				<li class="nav-item">

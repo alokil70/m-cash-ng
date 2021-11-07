@@ -9,13 +9,13 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
-import { GlobalFeedModule } from './globalFeed/globalFeed.module';
 import { TopBarModule } from './shared/modules/topBar/topBar.module';
 import { AuthInterceptor } from './shared/services/authinterceptor.service';
 import { PersistanceService } from './shared/services/persistance.service';
 import { AuthCashModule } from './auth-cash/auth-cash.module';
 import { CashBoardModule } from './cash-board/cash-board.module';
 import { GlobalOrdersModule } from './global-orders/global-orders.module';
+import { GlobalCashModule } from './global-cash/global-cash.module';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -32,6 +32,7 @@ import { GlobalOrdersModule } from './global-orders/global-orders.module';
 		EffectsModule.forRoot([]),
 		StoreRouterConnectingModule.forRoot(),
 		CashBoardModule,
+		GlobalCashModule,
 		TopBarModule,
 		GlobalOrdersModule,
 	],
@@ -44,5 +45,6 @@ import { GlobalOrdersModule } from './global-orders/global-orders.module';
 		},
 	],
 	bootstrap: [AppComponent],
+	exports: [],
 })
 export class AppModule {}

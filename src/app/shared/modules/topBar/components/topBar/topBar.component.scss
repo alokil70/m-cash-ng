@@ -19,7 +19,7 @@
 	right: 0;
 	height: 50px;
 	background-color: #5d6692;
-	position: absolute;
+	position: relative;
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .2);
 
 	ul {
@@ -38,7 +38,7 @@
 		cursor: pointer;
 		transition: .3s;
 
-		&:hover, &.nuxt-link-exact-active {
+		&:hover, &.active {
 			background-color: #dc3545;
 		}
 	}

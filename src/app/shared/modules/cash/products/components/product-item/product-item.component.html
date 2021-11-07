@@ -1,0 +1,7 @@
+<div class="card" [class]="card_props.background">
+	<div class="fz40">{{ card_props.name }}</div>
+	<div>{{ card_props.createdAt | date: 'hh:mm dd/M/yy' }}</div>
+	<div>
+		<div class="total">{{ card_props.price }} р</div>
+	</div>
+</div>

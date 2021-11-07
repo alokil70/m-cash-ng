@@ -1,12 +1,14 @@
 <div class="card" [class]="card_props.background">
-	{{ card_props.title }}
-	<p>3233</p>
-	<p>{{ card_props.background }}</p>
-	<div>{{ card_props.title }}</div>
-	<div>{{ card_props.total }}</div>
-	<div>{{ card_props.num }}</div>
-	<div>{{ card_props.table }}</div>
+	<div class="fz40">{{ card_props.num }}</div>
+	<div>{{ card_props.createdAt | date: 'hh:mm' }}</div>
+	<div>
+		<div class="total">{{ card_props.total }} р</div>
+	</div>
+	<div>{{ card_props.table }} стол</div>
 	<div>{{ card_props.position }}</div>
-	<div>{{ card_props.opened }}</div>
-	<div>{{ card_props.payed }}</div>
+	<div>{{ card_props.title }}</div>
+	<div>{{ card_props.title }}</div>
+	<div *ngIf="card_props.opened">пречек</div>
+	<div *ngIf="!card_props.opened"></div>
+	<div class="total">{{ card_props.payed ? '' : 'не' }} оплачен</div>
 </div>
