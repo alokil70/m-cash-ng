@@ -16,6 +16,7 @@ import { AuthCashModule } from './auth-cash/auth-cash.module';
 import { CashBoardModule } from './cash-board/cash-board.module';
 import { GlobalOrdersModule } from './global-orders/global-orders.module';
 import { GlobalCashModule } from './global-cash/global-cash.module';
+import { StatesModule } from './shared/states/states.module';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -35,6 +36,7 @@ import { GlobalCashModule } from './global-cash/global-cash.module';
 		GlobalCashModule,
 		TopBarModule,
 		GlobalOrdersModule,
+		StatesModule,
 	],
 	providers: [
 		PersistanceService,

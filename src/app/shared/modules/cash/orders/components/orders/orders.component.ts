@@ -21,7 +21,7 @@ export class OrdersComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.initializeValues();
-		this.fetchData();
+		// this.fetchData();
 	}
 
 	initializeValues(): void {
