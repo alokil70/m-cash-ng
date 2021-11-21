@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
 	constructor(private store: Store) {}
 
 	ngOnInit(): void {
-		this.fetchData();
+		// this.fetchData();
 		this.initializeValues();
 		this.categoryList();
 		this.filterData();
@@ -53,6 +53,7 @@ export class ProductsComponent implements OnInit {
 		this.isLoading$ = this.store.select(isLoadingSelector);
 		this.error$ = this.store.select(errorSelector);
 		this.productsWithData$ = this.store.select(productsSelector);
+		console.log(this.productsWithData$);
 	}
 
 	fetchData(): void {

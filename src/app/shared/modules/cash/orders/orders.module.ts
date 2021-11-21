@@ -11,7 +11,7 @@ import { OrdersItemComponent } from './components/orders-item/orders-item.compon
 @NgModule({
 	declarations: [OrdersComponent, OrdersItemComponent],
 	imports: [CommonModule, EffectsModule.forFeature([GetOrdersEffect]), StoreModule.forFeature('orders', reducers)],
-	exports: [OrdersComponent],
+	exports: [OrdersComponent, OrdersItemComponent],
 	providers: [OrdersService],
 })
 export class OrdersModule {}

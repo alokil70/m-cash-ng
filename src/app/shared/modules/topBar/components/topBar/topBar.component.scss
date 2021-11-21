@@ -17,9 +17,10 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 50px;
+	height: 7%;
 	background-color: #5d6692;
-	position: relative;
+	position: fixed;
+	overflow-x: auto;
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .2);
 
 	ul {

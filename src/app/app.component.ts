@@ -18,6 +18,6 @@ export class AppComponent {
 	ngOnInit(): void {
 		this.isLoggedIn$ = this.store.select(isLoggedInSelector);
 		this.store.dispatch(getCurrentUserCashAction());
-		this.store.dispatch(initialStateAction());
+		this.store.dispatch(initialStateAction({ url: '/initial-state' }));
 	}
 }
