@@ -25,13 +25,13 @@ import { StatesModule } from './shared/states/states.module';
 		AuthCashModule,
 		HttpClientModule,
 		RouterModule.forRoot([]),
-		StoreModule.forRoot({ router: routerReducer }),
+		/*StoreModule.forRoot({ router: routerReducer }),
 		StoreDevtoolsModule.instrument({
 			maxAge: 25,
 			logOnly: environment.production,
 		}),
 		EffectsModule.forRoot([]),
-		StoreRouterConnectingModule.forRoot(),
+		StoreRouterConnectingModule.forRoot(),*/
 		CashBoardModule,
 		GlobalCashModule,
 		TopBarModule,
