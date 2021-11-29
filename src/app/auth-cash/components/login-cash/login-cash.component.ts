@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { BackendErrorsInterface } from 'src/app/shared/types/backendErrors.interface';
-import { Store } from '@ngrx/store';
-import { isSubmittingSelector, validationErrorsSelector } from '../../../auth/store/selectors';
-import { loginCashAction } from 'src/app/auth-cash/store/actions/loginCash.action';
+import { Store } from '@ngxs/store';
 import { LoginCashRequestInterface } from 'src/app/auth-cash/types/loginCashRequest.interface';
 
 @Component({
@@ -28,8 +26,8 @@ export class LoginCashComponent implements OnInit {
 	}
 
 	initializeValues(): void {
-		this.isSubmitting$ = this.store.select(isSubmittingSelector);
-		this.backendErrors$ = this.store.select(validationErrorsSelector);
+		/*this.isSubmitting$ = this.store.select(isSubmittingSelector);
+		this.backendErrors$ = this.store.select(validationErrorsSelector);*/
 	}
 
 	initializeForm(): void {
@@ -49,7 +47,7 @@ export class LoginCashComponent implements OnInit {
 		if (!request.user.password) {
 			request.user.password = this.pass;
 		}
-		this.store.dispatch(loginCashAction({ request }));
+		// this.store.dispatch(loginCashAction({ request }));
 	}
 
 	keyEvent($event: string) {

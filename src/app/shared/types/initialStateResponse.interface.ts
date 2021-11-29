@@ -1,13 +1,9 @@
 import { OrdersInterface } from './orders.interface';
 import { ProductsInterface } from './products.interface';
+import { CategoryInterface } from './category.interface';
 
 export interface InitialStateResponseInterface {
-	orders: {
-		orders: OrdersInterface[];
-		ordersCount: number;
-	};
-	products: {
-		products: ProductsInterface[];
-		productsCount: number;
-	};
+	orders: OrdersInterface[];
+	products: ProductsInterface[];
+	categories: CategoryInterface[];
 }

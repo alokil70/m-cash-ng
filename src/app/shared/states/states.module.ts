@@ -1,18 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreModule } from '@ngrx/store';
-import { InitialStateEffect } from './initial-state/initialState.effect';
-import { reducers } from './initial-state/reducers';
-import { InitialStatesService } from '../services/initial-states.service';
+import { InitialStateService } from '../services/initial-state.service';
 
 @NgModule({
 	declarations: [],
 	imports: [
 		CommonModule,
-		EffectsModule.forFeature([InitialStateEffect]),
-		StoreModule.forFeature('initialStates', reducers),
+		/*EffectsModule.forFeature([InitialStateEffect]),
+		StoreModule.forFeature('initialStates', reducers),*/
 	],
-	providers: [InitialStatesService],
+	providers: [InitialStateService],
 })
 export class StatesModule {}

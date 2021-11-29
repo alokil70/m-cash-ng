@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { getCurrentUserCashAction } from './auth-cash/store/actions/getCurrentUserCash.action';
 import { Observable } from 'rxjs';
-import { isLoggedInSelector } from './auth-cash/store/selectors';
-import { initialStateAction } from './shared/states/initial-state/initial-state.action';
+import { Store } from '@ngxs/store';
+import { GetInitialState } from './shared/state/initial-state/initial-state.action';
 
 @Component({
 	selector: 'app-root',
@@ -16,8 +14,9 @@ export class AppComponent {
 	constructor(private store: Store) {}
 
 	ngOnInit(): void {
-		this.isLoggedIn$ = this.store.select(isLoggedInSelector);
-		this.store.dispatch(getCurrentUserCashAction());
-		this.store.dispatch(initialStateAction({ url: '/initial-state' }));
+		/*this.isLoggedIn$ = this.store.select(isLoggedInSelector);
+		this.store.dispatch(getCurrentUserCashAction());*/
+		this.store.dispatch(new GetInitialState());
+		// this.store.dispatch(initialStateAction({ url: '/initial-state' }));
 	}
 }

@@ -3,7 +3,7 @@ import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { catchError, switchMap, mergeMap } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { initialStateAction } from './initial-state.action';
-import { InitialStatesService } from '../../services/initial-states.service';
+import { InitialStateService } from '../../services/initial-state.service';
 import {
 	getOrdersFailureAction,
 	getOrdersSuccessAction,
@@ -17,11 +17,11 @@ export class InitialStateEffect {
 		return this.actions$.pipe(
 			ofType(initialStateAction),
 			switchMap(({ url }) => {
-				return this.statesService.initialStates(url).pipe(
+				return this.statesService.getInitialState(url).pipe(
 					mergeMap((res: InitialStateResponseInterface) => {
 						return [
-							getOrdersSuccessAction({ orders: res.orders }),
-							getProductsSuccessAction({ products: res.products }),
+							/*getOrdersSuccessAction({ orders: res.orders }),
+							getProductsSuccessAction({ products: res.products }),*/
 						];
 					}),
 					catchError(() => {
@@ -32,5 +32,5 @@ export class InitialStateEffect {
 		);
 	});
 
-	constructor(private actions$: Actions, private statesService: InitialStatesService) {}
+	constructor(private actions$: Actions, private statesService: InitialStateService) {}
 }

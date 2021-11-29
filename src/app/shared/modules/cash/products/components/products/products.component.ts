@@ -1,12 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { select, Store } from '@ngrx/store';
-import { productsSelector, isLoadingSelector, errorSelector } from '../../store/selectors';
-import { getProductsAction } from '../../store/actions/getProducts.action';
 import { map, tap } from 'rxjs/operators';
 import { ProductsInterface } from '../../../../../types/products.interface';
 import { GetProductsResponseInterface } from '../../types/getProductsResponse.interface';
 import { CategoryInterface } from '../../../../../types/category.interface';
+import { Store } from '@ngxs/store';
 
 @Component({
 	selector: 'app-products',
@@ -27,9 +25,9 @@ export class ProductsComponent implements OnInit {
 
 	ngOnInit(): void {
 		// this.fetchData();
-		this.initializeValues();
+		/*this.initializeValues();
 		this.categoryList();
-		this.filterData();
+		this.filterData();*/
 	}
 
 	categoryList(): void {
@@ -50,15 +48,15 @@ export class ProductsComponent implements OnInit {
 	}
 
 	initializeValues(): void {
-		this.isLoading$ = this.store.select(isLoadingSelector);
+		/*this.isLoading$ = this.store.select(isLoadingSelector);
 		this.error$ = this.store.select(errorSelector);
 		this.productsWithData$ = this.store.select(productsSelector);
-		console.log(this.productsWithData$);
+		console.log(this.productsWithData$);*/
 	}
 
-	fetchData(): void {
+	/*fetchData(): void {
 		this.store.dispatch(getProductsAction({ url: this.apiUrl }));
-	}
+	}*/
 
 	itemClick(item: any) {
 		console.log('click', item);

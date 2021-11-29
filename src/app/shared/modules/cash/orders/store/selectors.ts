@@ -1,8 +1,7 @@
-import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { AppStateInterface } from 'src/app/shared/types/appState.interface';
 import { OrdersStateInterface } from '../types/ordersState.interface';
 
-export const ordersFeatureSelector = createFeatureSelector<AppStateInterface, OrdersStateInterface>('orders');
+/*export const ordersFeatureSelector = createFeatureSelector<AppStateInterface, OrdersStateInterface>('orders');
 
 export const isLoadingSelector = createSelector(
 	ordersFeatureSelector,
@@ -17,4 +16,4 @@ export const errorSelector = createSelector(
 export const ordersSelector = createSelector(
 	ordersFeatureSelector,
 	(ordersState: OrdersStateInterface) => ordersState.data,
-);
+);*/

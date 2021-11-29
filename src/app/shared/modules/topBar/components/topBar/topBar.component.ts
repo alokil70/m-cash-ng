@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Store, select } from '@ngrx/store';
-
-import { isLoggedInSelector, isAnonymousSelector, currentUserSelector } from 'src/app/auth-cash/store/selectors';
 import { CurrentUserCashInterface } from '../../../../types/currentUserCash.interface';
+import { Store } from '@ngxs/store';
 
 @Component({
 	selector: 'app-top-bar',
@@ -18,8 +16,8 @@ export class TopBarComponent implements OnInit {
 	constructor(private store: Store) {}
 
 	ngOnInit(): void {
-		this.isLoggedIn$ = this.store.select(isLoggedInSelector);
+		/*this.isLoggedIn$ = this.store.select(isLoggedInSelector);
 		this.isAnonymous$ = this.store.select(isAnonymousSelector);
-		this.currentUser$ = this.store.select(currentUserSelector);
+		this.currentUser$ = this.store.select(currentUserSelector);*/
 	}
 }

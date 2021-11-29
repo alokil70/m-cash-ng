@@ -1,9 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { getOrdersAction } from '../../store/actions/getOrders.action';
+import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { GetOrdersResponseInterface } from '../../types/getOrdersResponse.interface';
-import { errorSelector, isLoadingSelector, ordersSelector } from '../../store/selectors';
 
 @Component({
 	selector: 'app-orders',
@@ -20,17 +18,17 @@ export class OrdersComponent implements OnInit {
 	constructor(private store: Store) {}
 
 	ngOnInit(): void {
-		this.initializeValues();
+		// this.initializeValues();
 		// this.fetchData();
 	}
 
 	initializeValues(): void {
-		this.isLoading$ = this.store.select(isLoadingSelector);
+		/*this.isLoading$ = this.store.select(isLoadingSelector);
 		this.error$ = this.store.select(errorSelector);
-		this.orders$ = this.store.select(ordersSelector);
+		this.orders$ = this.store.select(ordersSelector);*/
 	}
 
 	fetchData(): void {
-		this.store.dispatch(getOrdersAction({ url: this.apiUrl }));
+		// this.store.dispatch(getOrdersAction({ url: this.apiUrl }));
 	}
 }
