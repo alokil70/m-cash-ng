@@ -1,4 +1,6 @@
 <button class="btn" (click)="backToRoot()"><--</button>
-<div class="btn_block">
-	<app-product-item *ngFor="let item of cat" [card_props]="item" (click)="itemClick(item)"></app-product-item>
+<div class="scroll">
+	<div class="btn_block">
+		<app-product-item *ngFor="let item of cat" [card_props]="item" (click)="itemClick(item)"></app-product-item>
+	</div>
 </div>

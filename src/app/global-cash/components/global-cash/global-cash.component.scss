@@ -1,3 +1,7 @@
+.pl10 {
+	padding-left: 10px;
+}
+
 .grid_wrapper {
 	height: 70%;
 	display: grid;
@@ -6,14 +10,11 @@
 	grid-auto-rows: 90px;
 	column-gap: 10px;
 	row-gap: 10px;
-
 }
+
 .container {
 	display: flex;
 	position: absolute;
 	top: 70px;
 	height: 70%;
-}
-.overflow_x {
-	overflow-x: auto;
 }
