@@ -4,6 +4,7 @@ import { GlobalCashComponent } from './components/global-cash/global-cash.compon
 import { RouterModule } from '@angular/router';
 import { ProductsModule } from '../shared/modules/cash/products/products.module';
 import { OrderListComponent } from '../shared/modules/cash/order-list/order-list.component';
+import { OrderCartComponent } from '../shared/modules/cash/order-cart/order-cart.component';
 
 const routes = [
 	{
@@ -13,7 +14,7 @@ const routes = [
 ];
 
 @NgModule({
-	declarations: [GlobalCashComponent, OrderListComponent],
+	declarations: [GlobalCashComponent, OrderListComponent, OrderCartComponent],
 	imports: [CommonModule, ProductsModule, RouterModule.forChild(routes)],
 })
 export class GlobalCashModule {}
