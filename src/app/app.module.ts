@@ -9,7 +9,6 @@ import { TopBarModule } from './shared/modules/topBar/topBar.module';
 import { AuthInterceptor } from './shared/services/authinterceptor.service';
 import { PersistanceService } from './shared/services/persistance.service';
 import { AuthCashModule } from './auth-cash/auth-cash.module';
-import { CashBoardModule } from './cash-board/cash-board.module';
 import { GlobalOrdersModule } from './global-orders/global-orders.module';
 import { GlobalCashModule } from './global-cash/global-cash.module';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
@@ -36,7 +35,6 @@ import { InitialStateService } from './shared/services/initial-state.service';
 		}),
 		EffectsModule.forRoot([]),
 		StoreRouterConnectingModule.forRoot(),*/
-		CashBoardModule,
 		GlobalCashModule,
 		TopBarModule,
 		GlobalOrdersModule,

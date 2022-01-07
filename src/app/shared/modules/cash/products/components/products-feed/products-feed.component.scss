@@ -1,19 +1,9 @@
-.btn_block {
-	display: flex;
-	flex-wrap: wrap;
-	overflow-y: scroll;
-}
-.btn {
-	padding: 5px;
-	margin-bottom: 10px;
-}
-.scroll {
-	overflow-y: auto;
-}
-
-
-.e0t3mljh {
+.products_items {
+	margin-top: 3px;
+	margin-left: 3px;
 	align-content: start;
+	grid-template-columns: repeat(auto-fit, 190px);
+	grid-gap: 3px;
 	height: 639px;
-	width: 200px;
+	width: 400px;
 }

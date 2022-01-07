@@ -1,8 +1,0 @@
-<div *ngIf="isLoading$ | async" class="center">Loading...</div>
-<div *ngIf="error$ | async" class="center">Error...</div>
-<div *ngIf="products$ | async" class="wrapper">
-	<div class="block3rows">
-		<app-product-item *ngFor="let item of (productsWithData$ | async).products" [card_props]="item" (click)="itemClick(item)">
-		</app-product-item>
-	</div>
-</div>
