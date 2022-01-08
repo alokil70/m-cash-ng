@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { ProductsModule } from '../shared/modules/cash/products/products.module';
 import { OrderListComponent } from '../shared/modules/cash/order-list/order-list.component';
 import { OrderCartComponent } from '../shared/modules/cash/order-cart/order-cart.component';
+import { TopBarModule } from '../shared/modules/topBar/topBar.module';
+import { BottomBarModule } from '../shared/modules/bottom-bar/bottom-bar.module';
 
 const routes = [
 	{
@@ -15,6 +17,6 @@ const routes = [
 
 @NgModule({
 	declarations: [GlobalCashComponent, OrderListComponent, OrderCartComponent],
-	imports: [CommonModule, ProductsModule, RouterModule.forChild(routes)],
+	imports: [CommonModule, ProductsModule, TopBarModule, BottomBarModule, RouterModule.forChild(routes)],
 })
 export class GlobalCashModule {}
